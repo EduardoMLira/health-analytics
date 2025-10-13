@@ -1,0 +1,5 @@
+Tendência leve de aumento do IMC com a idade (IMC vs Idade).
+Mais exercícios/semana associam-se a melhor autoavaliação de saúde.
+Maior consumo de calorias tende a elevar o IMC (tendência positiva).
+Mais passos diários correlacionam-se com menor IMC (associação negativa).
+Colesterol total e glicemia em jejum apresentam correlação positiva moderada.

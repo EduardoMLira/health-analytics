@@ -1,51 +1,117 @@
-# Análise de Dados de Saúde (IMC, Exercícios e Alimentação)
+🩺 Health Analytics IMC — Análise de Dados de Saúde (IMC, Exercícios e Alimentação)
 
-**Aluno:** Eduardo Lira  
-**Disciplina:** Projeto (AC1/AC2/AC3 + Prova)  
+Aluno: Eduardo Lira
+Disciplina: Projeto de Análise de Dados (AC1 / AC2 / AC3 + Prova)
 
----
+📊 Visão Geral do Projeto
 
-## 🚀 Entregáveis AC1
-- Dataset bruto: `data/raw/saude.csv`  
-- Dataset limpo: `data/processed/saude_limpo.csv`  
-- Estatísticas descritivas: `notebooks/figs/estatisticas_basicas.csv`  
-- Gráficos:
-  - `notebooks/figs/hist_imc.png`
-  - `notebooks/figs/barras_categoria_imc.png`
-  - `notebooks/figs/box_min_exercicio_por_categoria.png`
+Este projeto tem como objetivo analisar dados de saúde (IMC, exercícios e alimentação) por meio de Python e visualização de dados.
+A cada etapa (AC), o projeto evolui com novas funcionalidades:
 
----
+Entrega	Foco Principal	Resultado
+AC1	Limpeza e exploração inicial do dataset	Geração de dataset limpo e gráficos básicos
+AC2	Relações entre variáveis e insights	Gráficos comparativos e heatmap de correlação
+AC3	Dashboard interativo	(a ser desenvolvido)
+Prova Final	Modelo de Machine Learning no dashboard	(a ser desenvolvido)
+🚀 Entregáveis AC1
 
-## 🎥 Vídeo da AC1
-👉 [https://youtu.be/pcDIt-kb12s]
+Dataset bruto: data/raw/saude.csv
 
----
+Dataset limpo: data/processed/saude_limpo.csv
 
-## 📋 Board do Projeto
-👉 [https://www.notion.so/edu-lira-programacao/26e8c052e80f80a3943cee69e7b622ae?source=copy_link]
+Estatísticas descritivas: notebooks/figs/estatisticas_basicas.csv
 
----
+Gráficos:
 
-## 📂 Como rodar (AC1)
+notebooks/figs/hist_imc.png
 
-```bash
-# 1) Criar ambiente virtual
+notebooks/figs/barras_categoria_imc.png
+
+notebooks/figs/box_min_exercicio_por_categoria.png
+
+🎥 Vídeo da AC1
+
+👉 Apresentação da AC1 no YouTube
+
+📈 Entregáveis AC2
+
+Gráficos adicionados:
+
+ac2_scatter_imc_vs_idade.png
+
+ac2_scatter_exercicios_vs_autoavaliacao.png
+
+ac2_scatter_calorias_vs_imc.png
+
+ac2_scatter_passos_vs_imc.png
+
+ac2_scatter_colesterol_vs_glicemia.png
+
+ac2_heatmap_correlacao.png
+
+Insights salvos em:
+notebooks/figs/ac2_insights.txt
+
+🧠 Principais Insights
+
+Tendência leve de aumento do IMC com a idade.
+
+Pessoas com mais exercícios semanais tendem a avaliar melhor sua saúde.
+
+Maior consumo calórico → aumento de IMC.
+
+Mais passos diários → menor IMC (associação negativa).
+
+Colesterol total e glicemia em jejum têm correlação positiva moderada.
+
+🗂️ Board do Projeto
+
+👉 Notion - Health Analytics IMC (Eduardo Lira)
+
+⚙️ Como Rodar o Projeto
+1️⃣ Criar ambiente virtual
 py -m venv .venv
 
-# 2) Ativar ambiente
+2️⃣ Ativar o ambiente
 # Windows PowerShell
 .\.venv\Scripts\Activate.ps1
-# Linux/Mac
-# source .venv/bin/activate
 
-# 3) Instalar dependências
+3️⃣ Instalar dependências
 py -m pip install -r requirements.txt
 
-# 4) Gerar dataset
+🧩 Rodar a AC1 (limpeza e exploração)
 py scripts\generate_dataset.py
-
-# 5) Limpeza
 py src\data_prep.py
-
-# 6) Exploração + gráficos
 py notebooks\AC1_limpeza_exploracao.py
+
+📊 Rodar a AC2 (relações e insights)
+# Garante que o Python encontre os módulos do projeto
+$env:PYTHONPATH = "."
+
+# Executar análise de relações e gerar gráficos
+py notebooks\AC2_relacoes_insights.py
+
+
+As saídas são salvas em notebooks/figs/.
+
+🧱 Estrutura do Projeto
+health-analytics-imc-AC1/
+│
+├── data/
+│   ├── raw/                 # Dataset original
+│   └── processed/           # Dataset limpo
+│
+├── notebooks/
+│   ├── AC1_limpeza_exploracao.py
+│   ├── AC2_relacoes_insights.py
+│   └── figs/                # Gráficos gerados
+│
+├── src/
+│   ├── data_prep.py         # Limpeza de dados
+│   └── viz.py               # Funções de visualização
+│
+├── scripts/
+│   └── generate_dataset.py  # Geração do dataset sintético
+│
+├── requirements.txt
+└── README.md
