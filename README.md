@@ -1,81 +1,97 @@
-🩺 Health Analytics IMC — Análise de Dados de Saúde (IMC, Exercícios e Alimentação)
+# 🩺 Health Analytics IMC — Análise de Dados de Saúde (IMC, Exercícios e Alimentação)
 
-Aluno: Eduardo Lira
-Disciplina: Projeto de Análise de Dados (AC1 / AC2 / AC3 + Prova)
+**Aluno:** Eduardo Lira  
+**Disciplina:** Projeto de Análise de Dados (AC1 / AC2 / AC3 + Prova)  
 
-📊 Visão Geral do Projeto
+---
 
-Este projeto tem como objetivo analisar dados de saúde (IMC, exercícios e alimentação) por meio de Python e visualização de dados.
-A cada etapa (AC), o projeto evolui com novas funcionalidades:
+## 📊 Visão Geral do Projeto
 
-Entrega	Foco Principal	Resultado
-AC1	Limpeza e exploração inicial do dataset	Geração de dataset limpo e gráficos básicos
-AC2	Relações entre variáveis e insights	Gráficos comparativos e heatmap de correlação
-AC3	Dashboard interativo	(a ser desenvolvido)
-Prova Final	Modelo de Machine Learning no dashboard	(a ser desenvolvido)
-🚀 Entregáveis AC1
+Este projeto tem como objetivo analisar **dados de saúde** (IMC, exercícios e alimentação) utilizando **Python**, **Pandas**, **Matplotlib** e **Streamlit**.  
+A cada etapa (AC), o projeto evolui com novas funcionalidades até chegar a um modelo preditivo completo com visualização interativa.
 
-Dataset bruto: data/raw/saude.csv
+| Entrega | Foco Principal | Resultado |
+|----------|----------------|------------|
+| **AC1** | Limpeza e exploração inicial do dataset | Geração de dataset limpo e gráficos básicos |
+| **AC2** | Relações entre variáveis e insights | Gráficos comparativos e heatmap de correlação |
+| **AC3** | Dashboard interativo com KPIs e filtros | Dashboard em Streamlit |
+| **Prova Final** | Modelo de Machine Learning no dashboard | Classificação de “Saudável” x “Em risco” |
 
-Dataset limpo: data/processed/saude_limpo.csv
+---
 
-Estatísticas descritivas: notebooks/figs/estatisticas_basicas.csv
+## 🚀 Entregáveis AC1
 
-Gráficos:
+- **Dataset bruto:** `data/raw/saude.csv`  
+- **Dataset limpo:** `data/processed/saude_limpo.csv`  
+- **Estatísticas descritivas:** `notebooks/figs/estatisticas_basicas.csv`  
+- **Gráficos:**
+  - `notebooks/figs/hist_imc.png`
+  - `notebooks/figs/barras_categoria_imc.png`
+  - `notebooks/figs/box_min_exercicio_por_categoria.png`
 
-notebooks/figs/hist_imc.png
+### 🎥 Vídeo da AC1
+📺 [Apresentação da AC1](https://www.youtube.com/watch?v=pcDIt-kb12s)
 
-notebooks/figs/barras_categoria_imc.png
+---
 
-notebooks/figs/box_min_exercicio_por_categoria.png
+## 📈 Entregáveis AC2
 
-🎥 Vídeo da AC1 {https://www.youtube.com/watch?v=pcDIt-kb12s}
-🎥 Vídeo da AC2 {https://youtu.be/TNYIgzC1zlQ}
+- **Gráficos adicionados:**
+  - `ac2_scatter_imc_vs_idade.png`
+  - `ac2_scatter_exercicios_vs_autoavaliacao.png`
+  - `ac2_scatter_calorias_vs_imc.png`
+  - `ac2_scatter_passos_vs_imc.png`
+  - `ac2_scatter_colesterol_vs_glicemia.png`
+  - `ac2_heatmap_correlacao.png`
+- **Insights salvos em:**  
+  `notebooks/figs/ac2_insights.txt`
 
-📈 Entregáveis AC2
+### 🧠 Principais Insights
 
-Gráficos adicionados:
+- Tendência leve de aumento do IMC com a idade.  
+- Pessoas com mais exercícios semanais tendem a avaliar melhor sua saúde.  
+- Maior consumo calórico → aumento de IMC.  
+- Mais passos diários → menor IMC (associação negativa).  
+- Colesterol total e glicemia em jejum têm correlação positiva moderada.
 
-ac2_scatter_imc_vs_idade.png
+### 🎥 Vídeo da AC2
+📺 [Apresentação da AC2](https://youtu.be/TNYIgzC1zlQ)
 
-ac2_scatter_exercicios_vs_autoavaliacao.png
+---
 
-ac2_scatter_calorias_vs_imc.png
+## 🧮 Entregáveis AC3 (Dashboard Interativo)
 
-ac2_scatter_passos_vs_imc.png
+- **App Streamlit:** `app/streamlit_app.py`
+- **Script automático de setup:** `setup.ps1`
+- **Dashboard com indicadores:**
+  - % de pessoas com sobrepeso/obesidade  
+  - Média de minutos de exercício por faixa etária  
+  - Média de calorias consumidas  
+  - Filtros por idade e sexo  
 
-ac2_scatter_colesterol_vs_glicemia.png
+🎯 Resultado: Um painel dinâmico que permite explorar os dados visualmente, de forma interativa e responsiva.
 
-ac2_heatmap_correlacao.png
+### 🎥 Vídeo da AC3
+📺 [Apresentação da AC3](https://youtu.be/BXtH0BPfYL8)
 
-Insights salvos em:
-notebooks/figs/ac2_insights.txt
+---
 
-🧠 Principais Insights
+## 🗂️ Board do Projeto
 
-Tendência leve de aumento do IMC com a idade.
+👉 [Notion - Health Analytics IMC (Eduardo Lira)](https://www.notion.so/edu-lira-programacao/Projeto-acad-mico-26e8c052e80f80a3943cee69e7b622ae?source=copy_link)
 
-Pessoas com mais exercícios semanais tendem a avaliar melhor sua saúde.
+---
 
-Maior consumo calórico → aumento de IMC.
+## ⚙️ Como Rodar o Projeto Manualmente
 
-Mais passos diários → menor IMC (associação negativa).
-
-Colesterol total e glicemia em jejum têm correlação positiva moderada.
-
-🗂️ Board do Projeto
-
-👉 Notion - Health Analytics IMC (Eduardo Lira) {https://www.notion.so/edu-lira-programacao/Projeto-acad-mico-26e8c052e80f80a3943cee69e7b622ae?source=copy_link}
-
-⚙️ Como Rodar o Projeto
-1️⃣ Criar ambiente virtual
+### 1️⃣ Criar ambiente virtual
+```powershell
 py -m venv .venv
 
-2️⃣ Ativar o ambiente
-# Windows PowerShell
+### 2️⃣ Ativar o ambiente
 .\.venv\Scripts\Activate.ps1
 
-3️⃣ Instalar dependências
+### 3️⃣ Instalar dependências
 py -m pip install -r requirements.txt
 
 🧩 Rodar a AC1 (limpeza e exploração)
@@ -84,33 +100,57 @@ py src\data_prep.py
 py notebooks\AC1_limpeza_exploracao.py
 
 📊 Rodar a AC2 (relações e insights)
-# Garante que o Python encontre os módulos do projeto
 $env:PYTHONPATH = "."
-
-# Executar análise de relações e gerar gráficos
 py notebooks\AC2_relacoes_insights.py
 
+🖥️ Rodar a AC3 (dashboard Streamlit)
+streamlit run app/streamlit_app.py
 
-As saídas são salvas em notebooks/figs/.
+⚡ Instalação Automática (recomendado)
+
+Se quiser automatizar todo o processo (criar ambiente, instalar dependências, gerar dataset e abrir o dashboard), basta executar o script:
+
+./setup.ps1
+
+
+Isso fará:
+
+Criação e ativação do ambiente virtual
+
+Instalação das bibliotecas necessárias
+
+Geração dos datasets
+
+Inicialização do dashboard no navegador
 
 🧱 Estrutura do Projeto
 health-analytics-imc-AC1/
 │
+├── app/
+│   └── streamlit_app.py         # Dashboard Streamlit (AC3)
+│
 ├── data/
-│   ├── raw/                 # Dataset original
-│   └── processed/           # Dataset limpo
+│   ├── raw/                     # Dataset original
+│   └── processed/               # Dataset limpo
 │
 ├── notebooks/
 │   ├── AC1_limpeza_exploracao.py
 │   ├── AC2_relacoes_insights.py
-│   └── figs/                # Gráficos gerados
-│
-├── src/
-│   ├── data_prep.py         # Limpeza de dados
-│   └── viz.py               # Funções de visualização
+│   └── figs/                    # Gráficos gerados
 │
 ├── scripts/
-│   └── generate_dataset.py  # Geração do dataset sintético
+│   └── generate_dataset.py      # Geração do dataset sintético
+│
+├── src/
+│   ├── data_prep.py             # Limpeza e transformação
+│   └── viz.py                   # Funções de visualização
 │
 ├── requirements.txt
+├── setup.ps1                    # Script de configuração automática
 └── README.md
+
+
+📘 Autor: Eduardo Lira
+
+🗓️ Última atualização: Novembro de 2025
+🧠 Tecnologias: Python, Pandas, Matplotlib, Streamlit
