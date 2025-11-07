@@ -29,9 +29,8 @@ notebooks/figs/barras_categoria_imc.png
 
 notebooks/figs/box_min_exercicio_por_categoria.png
 
-🎥 Vídeo da AC1
-
-👉 Apresentação da AC1 no YouTube
+🎥 Vídeo da AC1 {https://www.youtube.com/watch?v=pcDIt-kb12s}
+🎥 Vídeo da AC2 {https://youtu.be/TNYIgzC1zlQ}
 
 📈 Entregáveis AC2
 
@@ -66,7 +65,7 @@ Colesterol total e glicemia em jejum têm correlação positiva moderada.
 
 🗂️ Board do Projeto
 
-👉 Notion - Health Analytics IMC (Eduardo Lira)
+👉 Notion - Health Analytics IMC (Eduardo Lira) {https://www.notion.so/edu-lira-programacao/Projeto-acad-mico-26e8c052e80f80a3943cee69e7b622ae?source=copy_link}
 
 ⚙️ Como Rodar o Projeto
 1️⃣ Criar ambiente virtual
