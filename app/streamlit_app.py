@@ -172,6 +172,69 @@ def main():
     st.markdown("### Amostra dos dados filtrados")
     st.dataframe(df_filtrado.head(20))
 
+    # --------------------------
+    # Predição com modelo de ML (Prova Final)
+    # --------------------------
+    st.divider()
+    st.header("🔮 Predição de Saúde com Machine Learning")
+
+    st.write(
+        "Preencha os campos abaixo para o modelo estimar a **saúde** da pessoa, "
+        "usando as mesmas variáveis usadas durante o treino (IMC, exercícios e alimentação)."
+    )
+
+    import joblib
+
+    MODEL_PATH = Path(__file__).resolve().parent / "model.pkl"
+
+    @st.cache_resource
+    def load_model():
+        return joblib.load(MODEL_PATH)
+
+    model = load_model()
+
+    # Entradas
+    idade_p = st.number_input("Idade", min_value=18, max_value=100, value=30)
+    peso_p = st.number_input("Peso (kg)", min_value=40.0, max_value=200.0, value=75.0)
+    altura_p = st.number_input("Altura (m)", min_value=1.40, max_value=2.10, value=1.75)
+    exercicios_p = st.number_input("Exercícios por semana", min_value=0, max_value=14, value=3)
+    calorias_p = st.number_input("Calorias por dia", min_value=1200, max_value=5000, value=2200)
+    min_ex_p = st.number_input("Minutos de exercício por dia", min_value=0, max_value=240, value=30)
+    passos_p = st.number_input("Passos por dia", min_value=500, max_value=20000, value=8000, step=500)
+    frutas_p = st.number_input("Porções de frutas por dia", min_value=0, max_value=10, value=1)
+    verd_p = st.number_input("Porções de verduras por dia", min_value=0, max_value=10, value=1)
+
+    if st.button("Prever saúde"):
+        # Calcula IMC
+        imc_calc = peso_p / (altura_p ** 2)
+
+        # Dicionário com as features
+        data_dict = {
+            "idade": idade_p,
+            "exercicios_semana": exercicios_p,
+            "calorias_dia": calorias_p,
+            "frutas_por_dia": frutas_p,
+            "verduras_por_dia": verd_p,
+            "passos_dia": passos_p,
+            "min_exercicio_dia": min_ex_p,
+            "imc": imc_calc,
+        }
+
+        X_new = pd.DataFrame([data_dict])
+
+        # Descobre automaticamente a ordem de colunas usada no treino
+        if hasattr(model, "feature_names_in_"):
+            feature_order = list(model.feature_names_in_)
+            X_new = X_new[feature_order]
+
+        # Predição
+        y_pred = float(model.predict(X_new)[0])
+
+        st.success(f"Pontuação de saúde prevista: **{y_pred:.2f}**")
+        st.caption(
+            "Esta pontuação corresponde à autoavaliação de saúde estimada "
+            "com base nas variáveis fornecidas."
+        )
 
 if __name__ == "__main__":
     # Garante que o projeto pode ser rodado a partir da raiz

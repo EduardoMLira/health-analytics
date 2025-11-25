@@ -1,156 +1,215 @@
-# 🩺 Health Analytics IMC — Análise de Dados de Saúde (IMC, Exercícios e Alimentação)
+🩺 Health Analytics IMC — Análise de Dados de Saúde (IMC, Exercícios e Alimentação)
 
-**Aluno:** Eduardo Lira  
-**Disciplina:** Projeto de Análise de Dados (AC1 / AC2 / AC3 + Prova)  
+Aluno: Eduardo Lira
+Disciplina: Projeto de Análise de Dados (AC1 / AC2 / AC3 / Prova Final)
 
----
+📊 Visão Geral do Projeto
 
-## 📊 Visão Geral do Projeto
+Este projeto tem como objetivo analisar dados de saúde simulados relacionados a:
 
-Este projeto tem como objetivo analisar **dados de saúde** (IMC, exercícios e alimentação) utilizando **Python**, **Pandas**, **Matplotlib** e **Streamlit**.  
-A cada etapa (AC), o projeto evolui com novas funcionalidades até chegar a um modelo preditivo completo com visualização interativa.
+IMC
 
-| Entrega | Foco Principal | Resultado |
-|----------|----------------|------------|
-| **AC1** | Limpeza e exploração inicial do dataset | Geração de dataset limpo e gráficos básicos |
-| **AC2** | Relações entre variáveis e insights | Gráficos comparativos e heatmap de correlação |
-| **AC3** | Dashboard interativo com KPIs e filtros | Dashboard em Streamlit |
-| **Prova Final** | Modelo de Machine Learning no dashboard | Classificação de “Saudável” x “Em risco” |
+Hábitos alimentares
 
----
+Exercícios físicos
 
-## 🚀 Entregáveis AC1
+Pressão arterial
 
-- **Dataset bruto:** `data/raw/saude.csv`  
-- **Dataset limpo:** `data/processed/saude_limpo.csv`  
-- **Estatísticas descritivas:** `notebooks/figs/estatisticas_basicas.csv`  
-- **Gráficos:**
-  - `notebooks/figs/hist_imc.png`
-  - `notebooks/figs/barras_categoria_imc.png`
-  - `notebooks/figs/box_min_exercicio_por_categoria.png`
+Colesterol e glicemia
 
-### 🎥 Vídeo da AC1
-📺 [Apresentação da AC1](https://www.youtube.com/watch?v=pcDIt-kb12s)
+Autoavaliação de saúde
 
----
+Utilizando Python, Pandas, Matplotlib, Scikit-Learn e Streamlit, o projeto evolui em etapas até chegar a um dashboard interativo com predição baseada em Machine Learning.
 
-## 📈 Entregáveis AC2
+Entrega	Foco Principal	Resultado
+AC1	Limpeza e exploração inicial	Dataset limpo + estatísticas + gráficos
+AC2	Análise de relações e correlações	Gráficos comparativos + heatmap + insights
+AC3	Dashboard interativo (Streamlit)	KPIs, filtros e visualização dos dados
+Prova Final (AC4)	Machine Learning integrado ao dashboard	Modelo preditivo “Saudável x Em risco”
+🚀 AC1 — Limpeza e Exploração
+Arquivos
 
-- **Gráficos adicionados:**
-  - `ac2_scatter_imc_vs_idade.png`
-  - `ac2_scatter_exercicios_vs_autoavaliacao.png`
-  - `ac2_scatter_calorias_vs_imc.png`
-  - `ac2_scatter_passos_vs_imc.png`
-  - `ac2_scatter_colesterol_vs_glicemia.png`
-  - `ac2_heatmap_correlacao.png`
-- **Insights salvos em:**  
-  `notebooks/figs/ac2_insights.txt`
+data/raw/saude.csv
 
-### 🧠 Principais Insights
+data/processed/saude_limpo.csv
 
-- Tendência leve de aumento do IMC com a idade.  
-- Pessoas com mais exercícios semanais tendem a avaliar melhor sua saúde.  
-- Maior consumo calórico → aumento de IMC.  
-- Mais passos diários → menor IMC (associação negativa).  
-- Colesterol total e glicemia em jejum têm correlação positiva moderada.
+notebooks/figs/estatisticas_basicas.csv
 
-### 🎥 Vídeo da AC2
-📺 [Apresentação da AC2](https://youtu.be/TNYIgzC1zlQ)
+Gráficos
 
----
+hist_imc.png
 
-## 🧮 Entregáveis AC3 (Dashboard Interativo)
+barras_categoria_imc.png
 
-- **App Streamlit:** `app/streamlit_app.py`
-- **Script automático de setup:** `setup.ps1`
-- **Dashboard com indicadores:**
-  - % de pessoas com sobrepeso/obesidade  
-  - Média de minutos de exercício por faixa etária  
-  - Média de calorias consumidas  
-  - Filtros por idade e sexo  
+box_min_exercicio_por_categoria.png
 
-🎯 Resultado: Um painel dinâmico que permite explorar os dados visualmente, de forma interativa e responsiva.
+🎥 Vídeo AC1
 
-### 🎥 Vídeo da AC3
-📺 [Apresentação da AC3](https://youtu.be/BXtH0BPfYL8)
+📺 https://www.youtube.com/watch?v=pcDIt-kb12s
 
----
+📈 AC2 — Relações e Insights
+Gráficos
 
-## 🗂️ Board do Projeto
+IMC vs Idade
 
-👉 [Notion - Health Analytics IMC (Eduardo Lira)](https://www.notion.so/edu-lira-programacao/Projeto-acad-mico-26e8c052e80f80a3943cee69e7b622ae?source=copy_link)
+Exercícios vs Autoavaliação
 
----
+Calorias vs IMC
 
-## ⚙️ Como Rodar o Projeto Manualmente
+Passos vs IMC
 
-### 1️⃣ Criar ambiente virtual
-```powershell
+Colesterol vs Glicemia
+
+Heatmap de correlação
+
+Arquivo de insights
+
+notebooks/figs/ac2_insights.txt
+
+🎥 Vídeo AC2
+
+📺 https://youtu.be/TNYIgzC1zlQ
+
+🖥️ AC3 — Dashboard Interativo (Streamlit)
+
+Dashboard funcional com:
+
+Filtros de idade e sexo
+
+KPIs de saúde
+
+Gráficos dinâmicos
+
+Prévia dos dados filtrados
+
+Arquivo:
+
+app/streamlit_app.py
+
+🎥 Vídeo AC3
+
+📺 https://youtu.be/BXtH0BPfYL8
+
+🤖 Prova Final — Machine Learning Integrado ao Dashboard
+
+Nesta etapa foi desenvolvido um modelo preditivo para estimar saúde (baseado na coluna real autoavaliacao_saude).
+O modelo é integrado ao dashboard e responde em tempo real.
+
+🔧 Arquivos adicionados
+Arquivo	Função
+src/features.py	Pré-processamento dos dados para o modelo
+src/train_model.py	Treino do modelo RandomForest + salvamento do .pkl
+app/model.pkl	Modelo final salvo
+streamlit_app.py	Formulário de predição integrado ao dashboard
+
+🎥 Vídeo Prova final
+
+📺 
+
+📌 Como funciona a predição
+
+O usuário informa:
+
+idade
+
+peso / altura (IMC calculado automaticamente)
+
+exercícios semanais
+
+calorias diárias
+
+minutos de exercício
+
+passos diários
+
+frutas e verduras por dia
+
+O modelo retorna:
+
+➡️ Pontuação de saúde prevista (de 1 a 5)
+➡️ Quanto maior a pontuação, melhor o estado de saúde estimado.
+
+💻 Como Rodar o Projeto Manualmente
+1️⃣ Criar ambiente virtual
 py -m venv .venv
 
-### 2️⃣ Ativar o ambiente
+2️⃣ Ativar ambiente
 .\.venv\Scripts\Activate.ps1
 
-### 3️⃣ Instalar dependências
+3️⃣ Instalar dependências
 py -m pip install -r requirements.txt
 
-🧩 Rodar a AC1 (limpeza e exploração)
+🧩 Rodar a AC1
 py scripts\generate_dataset.py
 py src\data_prep.py
 py notebooks\AC1_limpeza_exploracao.py
 
-📊 Rodar a AC2 (relações e insights)
+📊 Rodar a AC2
 $env:PYTHONPATH = "."
 py notebooks\AC2_relacoes_insights.py
 
-🖥️ Rodar a AC3 (dashboard Streamlit)
+🖥️ Rodar o Dashboard (AC3 + Prova Final)
 streamlit run app/streamlit_app.py
 
 ⚡ Instalação Automática (recomendado)
 
-Se quiser automatizar todo o processo (criar ambiente, instalar dependências, gerar dataset e abrir o dashboard), basta executar o script:
+Execute:
 
 ./setup.ps1
 
 
-Isso fará:
+Ele faz tudo automaticamente:
 
-Criação e ativação do ambiente virtual
+✔ cria ambiente
+✔ instala dependências
+✔ gera datasets
+✔ treina modelo (se necessário)
+✔ abre o dashboard
 
-Instalação das bibliotecas necessárias
-
-Geração dos datasets
-
-Inicialização do dashboard no navegador
-
-🧱 Estrutura do Projeto
-health-analytics-imc-AC1/
+🧱 Estrutura Completa do Projeto
+health-analytics-imc/
 │
 ├── app/
-│   └── streamlit_app.py         # Dashboard Streamlit (AC3)
+│   ├── streamlit_app.py       # Dashboard Streamlit
+│   └── model.pkl              # Modelo ML treinado (Prova Final)
 │
 ├── data/
-│   ├── raw/                     # Dataset original
-│   └── processed/               # Dataset limpo
+│   ├── raw/
+│   └── processed/
 │
 ├── notebooks/
 │   ├── AC1_limpeza_exploracao.py
 │   ├── AC2_relacoes_insights.py
-│   └── figs/                    # Gráficos gerados
+│   └── figs/
 │
 ├── scripts/
-│   └── generate_dataset.py      # Geração do dataset sintético
+│   └── generate_dataset.py
 │
 ├── src/
-│   ├── data_prep.py             # Limpeza e transformação
-│   └── viz.py                   # Funções de visualização
+│   ├── data_prep.py
+│   ├── features.py            # Pré-processamento (Prova Final)
+│   ├── train_model.py         # Treino ML (Prova Final)
+│   └── viz.py
 │
+├── setup.ps1
 ├── requirements.txt
-├── setup.ps1                    # Script de configuração automática
 └── README.md
 
+🧠 Tecnologias Utilizadas
 
-📘 Autor: Eduardo Lira
+Python
 
-🗓️ Última atualização: Novembro de 2025
-🧠 Tecnologias: Python, Pandas, Matplotlib, Streamlit
+Pandas
+
+Matplotlib
+
+Scikit-Learn
+
+Streamlit
+
+PowerShell (automação)
+
+📘 Autor
+
+Eduardo Lira
+📆 Última atualização: Novembro de 2025
