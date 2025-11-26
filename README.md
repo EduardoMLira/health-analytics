@@ -26,6 +26,7 @@ AC1	Limpeza e exploração inicial	Dataset limpo + estatísticas + gráficos
 AC2	Análise de relações e correlações	Gráficos comparativos + heatmap + insights
 AC3	Dashboard interativo (Streamlit)	KPIs, filtros e visualização dos dados
 Prova Final (AC4)	Machine Learning integrado ao dashboard	Modelo preditivo “Saudável x Em risco”
+
 🚀 AC1 — Limpeza e Exploração
 Arquivos
 
@@ -104,7 +105,7 @@ streamlit_app.py	Formulário de predição integrado ao dashboard
 
 🎥 Vídeo Prova final
 
-📺 
+📺 https://youtu.be/HjwfzoVGCp0
 
 📌 Como funciona a predição
 
